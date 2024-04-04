@@ -1,0 +1,353 @@
+body {
+  font-family: "Montserrat", sans-serif; /* Replace 'Montserrat' with your chosen font name */
+}
+
+header {
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.logo-container img {
+  width: 50px; /* Adjust the width of the logo as needed */
+  margin-right: 10px; /* Add spacing between the logo and the heading */
+}
+
+header h1 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Styling for scroll header */
+.scroll-header {
+  display: none; /* Hide scroll header by default */
+  padding: 17px 17px 37px; /* Adjust padding to create more space */
+  background: rgba(255, 255, 255, 0.5); /* Full pure glass effect */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
+  position: fixed; /* Fix header position */
+  top: 0; /* Align header to the top */
+  left: 0;
+  width: 100%; /* Take full width of the viewport */
+  z-index: 1000; /* Ensure header stays above other content */
+  transition: opacity 0.3s; /* Add smooth transition for opacity */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Styling for logo-container in scroll header */
+.scroll-header .logo-container {
+  margin-right: 20px; /* Add right margin to create space */
+}
+
+.scroll-header .logo-container img {
+  width: 40px; /* Adjust the width of the logo */
+  margin-right: 10px; /* Add spacing between the logo and text */
+}
+
+.scroll-header h1 {
+  font-size: 1.2em; /* Adjust the font size of the text sentence */
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Styling for navigation in scroll header */
+.scroll-header nav {
+  margin-top: 20px; /* Add top margin to create space */
+}
+
+.scroll-header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.scroll-header nav ul li {
+  margin-right: 20px;
+}
+
+.scroll-header nav ul li:last-child {
+  margin-right: 0;
+}
+
+.scroll-header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Media query for smaller screen sizes */
+/* Media queries for different screen sizes */
+@media screen and (max-width: 992px) {
+  .scroll-header nav ul li a {
+    padding: 14px 18px; /* Adjust padding for medium screens */
+    font-size: 0.8em; /* Adjust font size for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scroll-header nav ul li a {
+    padding: 8px 10px; /* Adjust padding for small screens */
+    display: block; /* Change the display property to stack items vertically */
+    font-size: 0.7em; /* Adjust font size for small screens */
+  }
+}
+
+/* end of scroll header styling */
+
+h2 {
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+p {
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* Basic styling for knowledge base section */
+#knowledge-base {
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for individual categories */
+.category {
+  width: calc(25% - 20px); /* For large screens, display 4 boxes in a row */
+  margin-bottom: 20px; /* Adjust spacing between categories */
+  background: linear-gradient(
+    to right,
+    #1c3c6d,
+    #3060a0
+  ); /* Elabram blue shading */
+  color: #ffffff; /* Text color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.category i {
+  margin-right: 8px; /* Adjust the margin to create space between the icon and text */
+}
+
+.category h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category ul li {
+  margin-bottom: 10px;
+}
+
+.category ul li a {
+  text-decoration: none;
+  color: #ffffff; /* Adjust link color */
+}
+
+.category ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 992px) {
+  #knowledge-base .category {
+    width: calc(
+      33.33% - 20px
+    ); /* For medium screens, display 3 boxes in a row */
+  }
+}
+
+@media screen and (max-width: 756px) {
+  #knowledge-base .category {
+    width: 100%; /* For extra small screens, display 1 box per row */
+  }
+}
+
+#video-section {
+  position: relative;
+  height: 500px; /* Adjust the height of the video section */
+}
+
+#video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set video width to cover the entire container */
+  height: 100%; /* Set video height to cover the entire container */
+  object-fit: cover; /* Ensure video covers the entire area */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.content h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.5em;
+}
+
+/* Styling for navigation links */
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px; /* Added padding to create space */
+  border-radius: 5px;
+  background: linear-gradient(to right, #1c3c6d, #337cbf);
+  /* Adjusting background and gradient */
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Display list items horizontally */
+}
+
+nav ul li {
+  margin-right: 20px; /* Adjust the spacing between items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px; /* Adjust padding for smaller screens */
+  border-radius: 5px;
+  background: linear-gradient(to right, #1c3c6d, #3060a0);
+}
+
+/* Media query for smaller screen sizes */
+/* Media queries for different screen sizes */
+@media screen and (max-width: 992px) {
+  nav ul li a {
+    padding: 14px 17px; /* Adjust padding for medium screens */
+    font-size: 0.8em; /* Adjust font size for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul li a {
+    padding: 12px 16px; /* Adjust padding for small screens */
+    font-size: 0.7em; /* Adjust font size for small screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav ul li a {
+    padding: 4px 8px; /* Adjust padding for extra small screens */
+    font-size: 0.7em; /* Adjust font size for extra small screens */
+    display: block; /* Change the display property to stack items vertically */
+    margin-right: 0.2px; /* Reduce margin between navigation items on extra small screens */
+  }
+}
+
+/* Styling for main content sections */
+main {
+  padding: 20px;
+}
+
+/* Styling for footer */
+footer {
+  background-color: #337cbf; /* fallback color */
+  background-image: linear-gradient(to right, #1c3c6d, #337cbf);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Styling for chat bubble */
+.chat-bubble {
+  background-color: #337cbf; /* fallback color */
+  background-image: linear-gradient(to right, #1c3c6d, #337cbf);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 9999;
+  /* Box shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for chat bubble */
+.chat-bubble:hover {
+  /* Adjust shadow and brightness on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(110%);
+}
+
+#team {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team-member {
+  width: calc(25% - 20px); /* For large screens, display 4 boxes in a row */
+  margin-bottom: 20px;
+  background: linear-gradient(
+    to right,
+    #1c3c6d,
+    #3060a0
+  ); /* Elabram blue shading */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.member-details h3 {
+  margin-top: 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 992px) {
+  .team-member {
+    width: calc(
+      33.33% - 20px
+    ); /* For small screens, display 2 boxes in a row */
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .team-member {
+    width: 100%; /* For extra small screens, display 1 box per row */
+  }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elabram IT Support</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+    <header>
+      <div class="logo-container">
+        <img src="Photos/icon-blue.svg" alt="Company Logo"> <!-- Add your logo file here -->
+        <h1>Elabram IT Support Helpdesk</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="scrollToSection('knowledge-base')">Knowledge Base</a></li>
+          <li><a href="#" onclick="scrollToSection('team')">Our Team</a></li>
+          <li><a href="#chat">Live Chat</a></li>
+        </ul>
+      </nav>
+    </header>
+    <header class="scroll-header">
+      <div class="logo-container">
+        <img src="Photos/icon-blue.svg" alt="Company Logo"> <!-- Add your logo file here -->
+        <h1>Elabram IT Support Helpdesk</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Knowledge Base</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#chat">Live Chat</a></li>
+        </ul>
+      </nav>
+    </header>
+        <section id="video-section">
+          <div id="video-container">
+            <video autoplay muted loop playsinline id="video-bg">
+              <source src="Photos/front-background.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="content">
+            <!-- Your content for the first section goes here -->
+            <h2>Welcome to IT Support Helpdesk</h2>
+            <p></p>
+          </div>
+        </section>
+      
+    <main>
+      <section id="popular-articles">
+        <h2>Popular Articles</h2>
+        <ul id="popular-articles-list">
+          <!-- Popular articles will be dynamically inserted here -->
+        </ul>
+      </section>
+      <section id="knowledge-base">
+        <h2>Knowledge Base</h2>
+        <section id="knowledge-base">
+          <div class="category">
+          <h2><i class="fas fa-laptop"></i>Hardware Issues</h2>
+		<ul>
+    			<li><a href="https://elabram.com/" class="article-link" data-article="Troubleshooting computer not turning on">Troubleshooting computer not turning on</a></li>
+    			<li><a href="#" class="article-link" data-article="Fixing monitor/display issues">Fixing monitor/display issues</a></li>
+    			<li><a href="#" class="article-link" data-article="Keyboard/mouse not working solutions">Keyboard/mouse not working solutions</a></li>
+		</ul>
+          </div>
+        
+          <div class="category">
+            <h2><i class="fas fa-cogs"></i></i>Software Support</h2>
+            <ul>
+    		<li><a href="#" data-article="Installing and setting up office suites">Installing and setting up office suites</a></li>
+    		<li><a href="#" data-article="Troubleshooting software errors">Troubleshooting software errors</a></li>
+    		<li><a href="#" data-article="Updating software guides">Updating software guides</a></li>
+            </ul>
+          </div>
+          <div class="category">
+            <h2><i class="fas fa-wifi"></i>Network Connectivity</h2>
+            <ul>
+		<li><a href="#" data-article="Connecting to Wi-Fi networks">Connecting to Wi-Fi networks</a></li>
+    		<li><a href="#" data-article="Troubleshooting network connectivity issues">Troubleshooting network connectivity issues</a></li>
+    		<li><a href="#" data-article="Configuring network settings">Configuring network settings</a></li>
+            </ul>
+          </div>
+        
+          <div class="category">
+            <h2><i class="fas fa-envelope"></i>Email Setup and Troubleshooting</h2>
+            <ul>
+		<li><a href="#" data-article="Setting up email accounts on various clients">Setting up email accounts on various clients</a></li>
+		<li><a href="#" data-article="Troubleshooting email sending/receiving issues">Troubleshooting email sending/receiving issues</a></li>
+		<li><a href="#" data-article="Managing email settings">Managing email settings</a></li>
+            </ul>
+          </div>
+          <div id="security-privacy" class="category">
+            <h2><i class="fas fa-lock"></i>Security and Privacy</h2>
+            <ul>
+		<li><a href="#security-privacy" data-article="Recognizing and avoiding phishing scams and malware.">Recognizing and avoiding phishing scams and malware.</a></li>
+		<li><a href="#security-privacy" data-article="Configuring security settings on devices and software.">Configuring security settings on devices and software.</a></li>
+		<li><a href="#security-privacy" data-article="Protecting personal information and data privacy.">Protecting personal information and data privacy.</a></li>
+            </ul>
+          </div>
+          
+          <div id="os-tips-tricks" class="category">
+            <h2><i class="fas fa-sync"></i>Operating System Tips and Tricks</h2>
+            <ul>
+		<li><a href="#os-tips-tricks" data-article="Tips for optimizing system performance (e.g., disk cleanup, defragmentation).">Tips for optimizing system performance (e.g., disk cleanup, defragmentation).</a></li>
+		<li><a href="#os-tips-tricks" data-article="Customizing operating system settings and preferences (e.g., desktop appearance, system sounds).">Customizing operating system settings and preferences (e.g., desktop appearance, system sounds).</a></li>
+		<li><a href="#os-tips-tricks" data-article="Using built-in utilities for diagnostics and maintenance.">Using built-in utilities for diagnostics and maintenance.</a></li>
+            </ul>
+          </div>
+          
+          <div id="password-management" class="category">
+            <h2><i class="fas fa-key"></i>Password Management</h2>
+            <ul>
+		<li><a href="#password-management" data-article="Creating strong passwords and managing password security.">Creating strong passwords and managing password security.</a></li>
+		<li><a href="#password-management" data-article="Resetting forgotten passwords and recovering access to accounts.">Resetting forgotten passwords and recovering access to accounts.</a></li>
+		<li><a href="#password-management" data-article="Using password management tools and best practices.">Using password management tools and best practices.</a></li>
+            </ul>
+          </div>
+          
+          <div id="mobile-devices-support" class="category">
+            <h2><i class="fas fa-mobile-alt"></i>Mobile Devices Support</h2>
+            <ul>
+		<li><a href="#mobile-devices-support" data-article="Setting up and troubleshooting mobile devices (e.g., smartphones, tablets).">Setting up and troubleshooting mobile devices (e.g., smartphones, tablets).</a></li>
+		<li><a href="#mobile-devices-support" data-article="Configuring mobile device settings (e.g., Wi-Fi, notifications).">Configuring mobile device settings (e.g., Wi-Fi, notifications).</a></li>
+		<li><a href="#mobile-devices-support" data-article="Installing and managing mobile apps.">Installing and managing mobile apps.</a></li>
+            </ul>
+          </div>
+          <div id="data-backup-recovery" class="category">
+            <h2><i class="fas fa-database"></i>Data Backup and Recovery</h2>
+            <ul>
+		<li><a href="#data-backup-recovery" data-article="Creating backups of important files and data.">Creating backups of important files and data.</a></li>
+		<li><a href="#data-backup-recovery" data-article="Restoring files from backups in case of data loss or system failure.">Restoring files from backups in case of data loss or system failure.</a></li>
+		<li><a href="#data-backup-recovery" data-article="Choosing and using backup solutions (e.g., cloud storage, external drives).">Choosing and using backup solutions (e.g., cloud storage, external drives).</a></li>
+
+            </ul>
+          </div>
+          
+          <div id="general-it-tips-how-tos" class="category">
+            <h2><i class="fas fa-info-circle"></i>General IT Tips and How-Tos</h2>
+            <ul>
+		<li><a href="#general-it-tips-how-tos" data-article="General tips for improving computer and device performance.">General tips for improving computer and device performance.</a></li>
+		<li><a href="#general-it-tips-how-tos" data-article="How-to guides for common tasks (e.g., file management, software updates).">How-to guides for common tasks (e.g., file management, software updates).</a></li>
+		<li><a href="#general-it-tips-how-tos" data-article="FAQs and troubleshooting guides for miscellaneous issues.">FAQs and troubleshooting guides for miscellaneous issues.</a></li>
+            </ul>
+          </div>
+
+          <!-- Add more category divs for other categories -->
+        </section>
+      </section>
+      <section id="team">
+        <h2>Our Team</h2>
+        <section id="team">
+          <section id="team">
+            <div class="team-member">
+              <img src="staff1.jpg" alt="John Doe">
+              <div class="member-details">
+                <h3>John Doe</h3>
+                <p>IT Manager</p>
+                <p>Email: john@example.com</p>
+                <p>Phone: +123456789</p>
+              </div>
+            </div>
+            
+            <div class="team-member">
+              <img src="staff2.jpg" alt="Jane Smith">
+              <div class="member-details">
+                <h3>Jane Smith</h3>
+                <p>IT Support Specialist</p>
+                <p>Email: jane@example.com</p>
+                <p>Phone: +987654321</p>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="staff2.jpg" alt="Jane Smith">
+              <div class="member-details">
+                <h3>Jane Smith</h3>
+                <p>IT Support Specialist</p>
+                <p>Email: jane@example.com</p>
+                <p>Phone: +987654321</p>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="staff2.jpg" alt="Jane Smith">
+              <div class="member-details">
+                <h3>Jane Smith</h3>
+                <p>IT Support Specialist</p>
+                <p>Email: jane@example.com</p>
+                <p>Phone: +987654321</p>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="staff3.jpg" alt="Michael Johnson">
+              <div class="member-details">
+                <h3>Michael Johnson</h3>
+                <p>Network Engineer</p>
+                <p>Email: michael@example.com</p>
+                <p>Phone: +555555555</p>
+              </div>
+            </div>
+          <div class="team-member">
+            <img src="path_to_image.jpg" alt="Staff Name">
+            <div class="member-details">
+              <h3>Staff Name</h3>
+              <p>Position God</p>
+              <p>Email: example@example.com</p>
+              <p>Phone: +123456789</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="staff2.jpg" alt="Jane Smith">
+            <div class="member-details">
+              <h3>Jane Smith</h3>
+              <p>IT Support Specialist</p>
+              <p>Email: jane@example.com</p>
+              <p>Phone: +987654321</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="staff2.jpg" alt="Jane Smith">
+            <div class="member-details">
+              <h3>Jane Smith</h3>
+              <p>IT Support Specialist</p>
+              <p>Email: jane@example.com</p>
+              <p>Phone: +987654321</p>
+            </div>
+          </div>
+          <!-- Add more team members as needed -->
+        </section>
+      </section>
+      <section id="ticket">
+        <h2>Submit a Ticket</h2>
+        <!-- Ticket submission form will be displayed here -->
+      </section>
+      <section id="chat">
+        <h2>Live Chat</h2>
+        <!-- Live chat interface will be displayed here -->
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Elabram IT Support</p>
+    </footer>
+    <script src="script.js"></script>
+
+  </body>
+</html>
