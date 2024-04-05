@@ -1,3 +1,24 @@
+function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+window.addEventListener("scroll", function () {
+  var scrollHeader = document.querySelector(".scroll-header");
+  var videoSection = document.getElementById("video-section");
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > videoSection.offsetTop) {
+    scrollHeader.style.display = "block";
+  } else {
+    scrollHeader.style.display = "none";
+  }
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   // Define articleClicks as a global variable
   let articleClicks = {};

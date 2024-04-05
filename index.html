@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-
     <header>
       <div class="logo-container">
         <img src="Photos/icon-blue.svg" alt="Company Logo"> <!-- Add your logo file here -->
@@ -58,99 +56,52 @@
           <!-- Popular articles will be dynamically inserted here -->
         </ul>
       </section>
+
       <section id="knowledge-base">
         <h2>Knowledge Base</h2>
-        <section id="knowledge-base">
-          <div class="category">
-          <h2><i class="fas fa-laptop"></i>Hardware Issues</h2>
-		<ul>
-    			<li><a href="https://elabram.com/" class="article-link" data-article="Troubleshooting computer not turning on">Troubleshooting computer not turning on</a></li>
-    			<li><a href="#" class="article-link" data-article="Fixing monitor/display issues">Fixing monitor/display issues</a></li>
-    			<li><a href="#" class="article-link" data-article="Keyboard/mouse not working solutions">Keyboard/mouse not working solutions</a></li>
-		</ul>
-          </div>
+      </section>
+      <section id="knowledge-base">
+        <div class="category">
+            <h3>Account Management</h3>
+            <ul class="subtopics">
+                <li><a href="#" class="article-link" data-article="How to enable 2FA">How to enable 2FA</a></li>
+                <li><a href="#" class="article-link" data-article="How to reset your password">How to reset your password</a></li>
+                <li><a href="#" class="article-link" data-article="CPanel email setup (for NPO team only)">CPanel email setup (for NPO team only)</a></li>
+                <li><a href="#" class="article-link" data-article="Email signature setting">Email signature setting</a></li>
+            </ul>
+        </div>
         
-          <div class="category">
-            <h2><i class="fas fa-cogs"></i></i>Software Support</h2>
-            <ul>
-    		<li><a href="#" data-article="Installing and setting up office suites">Installing and setting up office suites</a></li>
-    		<li><a href="#" data-article="Troubleshooting software errors">Troubleshooting software errors</a></li>
-    		<li><a href="#" data-article="Updating software guides">Updating software guides</a></li>
+        <div class="category">
+            <h3>Hardware Issues</h3>
+            <ul class="subtopics">
+                <li><a href="#" class="article-link" data-article="Mouse not functioning">Mouse not functioning</a></li>
+                <li><a href="#" class="article-link" data-article="The laptop is not turning on">The laptop is not turning on</a></li>
+                <li><a href="#" class="article-link" data-article="Display Issue">Display Issue</a></li>
+                <li><a href="#" class="article-link" data-article="Keyboard not functioning">Keyboard not functioning</a></li>
+                <li><a href="#" class="article-link" data-article="Reset wifi network">Reset wifi network</a></li>
+                <li><a href="#" class="article-link" data-article="Printer installation">Printer installation</a></li>
+                <li><a href="#" class="article-link" data-article="Can't print">Can't print</a></li>
             </ul>
-          </div>
-          <div class="category">
-            <h2><i class="fas fa-wifi"></i>Network Connectivity</h2>
-            <ul>
-		<li><a href="#" data-article="Connecting to Wi-Fi networks">Connecting to Wi-Fi networks</a></li>
-    		<li><a href="#" data-article="Troubleshooting network connectivity issues">Troubleshooting network connectivity issues</a></li>
-    		<li><a href="#" data-article="Configuring network settings">Configuring network settings</a></li>
-            </ul>
-          </div>
+        </div>
         
-          <div class="category">
-            <h2><i class="fas fa-envelope"></i>Email Setup and Troubleshooting</h2>
-            <ul>
-		<li><a href="#" data-article="Setting up email accounts on various clients">Setting up email accounts on various clients</a></li>
-		<li><a href="#" data-article="Troubleshooting email sending/receiving issues">Troubleshooting email sending/receiving issues</a></li>
-		<li><a href="#" data-article="Managing email settings">Managing email settings</a></li>
+        <div class="category">
+            <h3>Software Issues</h3>
+            <ul class="subtopics">
+                <li><a href="#" class="article-link" data-article="Software update">Software update</a></li>
+                <li><a href="#" class="article-link" data-article="Setting email on the phone">Setting email on the phone</a></li>
+                <li><a href="#" class="article-link" data-article="Virus infection">Virus infection</a></li>
+                <li><a href="#" class="article-link" data-article="Purchase Request">Purchase Request</a></li>
             </ul>
-          </div>
-          <div id="security-privacy" class="category">
-            <h2><i class="fas fa-lock"></i>Security and Privacy</h2>
-            <ul>
-		<li><a href="#security-privacy" data-article="Recognizing and avoiding phishing scams and malware.">Recognizing and avoiding phishing scams and malware.</a></li>
-		<li><a href="#security-privacy" data-article="Configuring security settings on devices and software.">Configuring security settings on devices and software.</a></li>
-		<li><a href="#security-privacy" data-article="Protecting personal information and data privacy.">Protecting personal information and data privacy.</a></li>
+        </div>
+        
+        <div class="category">
+            <h3>Data Security and Privacy</h3>
+            <ul class="subtopics">
+                <li><a href="#" class="article-link" data-article="Phishing email guideline">Phishing email guideline</a></li>
+                <li><a href="#" class="article-link" data-article="How to backup data to Google Drive">How to backup data to Google Drive</a></li>
+                <li><a href="#" class="article-link" data-article="Protecting personal information and data privacy">Protecting personal information and data privacy</a></li>
             </ul>
-          </div>
-          
-          <div id="os-tips-tricks" class="category">
-            <h2><i class="fas fa-sync"></i>Operating System Tips and Tricks</h2>
-            <ul>
-		<li><a href="#os-tips-tricks" data-article="Tips for optimizing system performance (e.g., disk cleanup, defragmentation).">Tips for optimizing system performance (e.g., disk cleanup, defragmentation).</a></li>
-		<li><a href="#os-tips-tricks" data-article="Customizing operating system settings and preferences (e.g., desktop appearance, system sounds).">Customizing operating system settings and preferences (e.g., desktop appearance, system sounds).</a></li>
-		<li><a href="#os-tips-tricks" data-article="Using built-in utilities for diagnostics and maintenance.">Using built-in utilities for diagnostics and maintenance.</a></li>
-            </ul>
-          </div>
-          
-          <div id="password-management" class="category">
-            <h2><i class="fas fa-key"></i>Password Management</h2>
-            <ul>
-		<li><a href="#password-management" data-article="Creating strong passwords and managing password security.">Creating strong passwords and managing password security.</a></li>
-		<li><a href="#password-management" data-article="Resetting forgotten passwords and recovering access to accounts.">Resetting forgotten passwords and recovering access to accounts.</a></li>
-		<li><a href="#password-management" data-article="Using password management tools and best practices.">Using password management tools and best practices.</a></li>
-            </ul>
-          </div>
-          
-          <div id="mobile-devices-support" class="category">
-            <h2><i class="fas fa-mobile-alt"></i>Mobile Devices Support</h2>
-            <ul>
-		<li><a href="#mobile-devices-support" data-article="Setting up and troubleshooting mobile devices (e.g., smartphones, tablets).">Setting up and troubleshooting mobile devices (e.g., smartphones, tablets).</a></li>
-		<li><a href="#mobile-devices-support" data-article="Configuring mobile device settings (e.g., Wi-Fi, notifications).">Configuring mobile device settings (e.g., Wi-Fi, notifications).</a></li>
-		<li><a href="#mobile-devices-support" data-article="Installing and managing mobile apps.">Installing and managing mobile apps.</a></li>
-            </ul>
-          </div>
-          <div id="data-backup-recovery" class="category">
-            <h2><i class="fas fa-database"></i>Data Backup and Recovery</h2>
-            <ul>
-		<li><a href="#data-backup-recovery" data-article="Creating backups of important files and data.">Creating backups of important files and data.</a></li>
-		<li><a href="#data-backup-recovery" data-article="Restoring files from backups in case of data loss or system failure.">Restoring files from backups in case of data loss or system failure.</a></li>
-		<li><a href="#data-backup-recovery" data-article="Choosing and using backup solutions (e.g., cloud storage, external drives).">Choosing and using backup solutions (e.g., cloud storage, external drives).</a></li>
-
-            </ul>
-          </div>
-          
-          <div id="general-it-tips-how-tos" class="category">
-            <h2><i class="fas fa-info-circle"></i>General IT Tips and How-Tos</h2>
-            <ul>
-		<li><a href="#general-it-tips-how-tos" data-article="General tips for improving computer and device performance.">General tips for improving computer and device performance.</a></li>
-		<li><a href="#general-it-tips-how-tos" data-article="How-to guides for common tasks (e.g., file management, software updates).">How-to guides for common tasks (e.g., file management, software updates).</a></li>
-		<li><a href="#general-it-tips-how-tos" data-article="FAQs and troubleshooting guides for miscellaneous issues.">FAQs and troubleshooting guides for miscellaneous issues.</a></li>
-            </ul>
-          </div>
-
-          <!-- Add more category divs for other categories -->
-        </section>
+        </div>
       </section>
       <section id="team">
         <h2>Our Team</h2>
