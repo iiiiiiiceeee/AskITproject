@@ -2,8 +2,18 @@ body {
   font-family: "Montserrat", sans-serif; /* Replace 'Montserrat' with your chosen font name */
 }
 
+/* Header */
 header {
-  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Glass effect background */
+  padding: 10px 20px; /* Adjust padding as needed */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  z-index: 1000; /* Ensure the header stays on top */
+  -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
 .logo-container {
@@ -12,7 +22,7 @@ header {
 }
 
 .logo-container img {
-  width: 50px; /* Adjust the width of the logo as needed */
+  width: 40px; /* Adjust the width of the logo as needed */
   margin-right: 10px; /* Add spacing between the logo and the heading */
 }
 
@@ -21,91 +31,161 @@ header h1 {
   font-weight: bold;
 }
 
-/* Styling for scroll header */
-.scroll-header {
-  display: none; /* Hide scroll header by default */
-  padding: 17px 17px 37px; /* Adjust padding to create more space */
-  background: rgba(255, 255, 255, 0.5); /* Full pure glass effect */
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
-  position: fixed; /* Fix header position */
-  top: 0; /* Align header to the top */
-  left: 0;
-  width: 100%; /* Take full width of the viewport */
-  z-index: 1000; /* Ensure header stays above other content */
-  transition: opacity 0.3s; /* Add smooth transition for opacity */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-}
-
-/* Styling for logo-container in scroll header */
-.scroll-header .logo-container {
-  margin-right: 20px; /* Add right margin to create space */
-}
-
-.scroll-header .logo-container img {
-  width: 40px; /* Adjust the width of the logo */
-  margin-right: 10px; /* Add spacing between the logo and text */
-}
-
-.scroll-header h1 {
-  font-size: 1.2em; /* Adjust the font size of the text sentence */
-  margin: 0;
-  font-weight: bold;
-}
-
-/* Styling for navigation in scroll header */
-.scroll-header nav {
-  margin-top: 20px; /* Add top margin to create space */
-}
-
-.scroll-header nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.scroll-header nav ul li {
-  margin-right: 20px;
-}
-
-.scroll-header nav ul li:last-child {
-  margin-right: 0;
-}
-
-.scroll-header nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-/* Media query for smaller screen sizes */
-/* Media queries for different screen sizes */
-@media screen and (max-width: 992px) {
-  .scroll-header nav ul li a {
-    padding: 14px 18px; /* Adjust padding for medium screens */
-    font-size: 0.8em; /* Adjust font size for medium screens */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .scroll-header nav ul li a {
-    padding: 8px 10px; /* Adjust padding for small screens */
-    display: block; /* Change the display property to stack items vertically */
-    font-size: 0.7em; /* Adjust font size for small screens */
-  }
-}
-
-/* end of scroll header styling */
-
 h2 {
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
 }
+
 p {
   margin-bottom: 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+
+/* Apply basic styling to the wrapper */
+#wrapper {
+  display: flex;
+}
+
+
+
+/* Styling for scroll header */
+
+/* end of scroll header styling */
+
+
+
+
+/* LEFT MENUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU */
+
+#left-menu-new {
+  margin-bottom: 0; /* Remove bottom margin */
+  margin-top: 1.5%;
+  display: block;
+  position: fixed;
+  top: 12%;
+  left: 0;
+  width: 20%;
+  min-width: 200px;
+  max-width: 300px;
+  height: 80%;
+  background-color: #ffffff;
+  overflow-y: scroll; /* Changed from auto to scroll */
+  z-index: 999;
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* WebKit (Chrome, Safari) */
+#left-menu-new::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+#left-menu-new::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+#left-menu-new::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+#left-menu-new::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Styling for individual categories */
+.left-menu-category {
+  width: 100%; /* Adjust width to fit the left menu */
+  background: linear-gradient(to right, #1c3c6d, #3060a0); /* Elabram blue shading */
+  color: #ffffff; /* Text color */
+  padding: 20px;
+  /* border-radius: 10px; */ /* Remove border-radius to make it a full box */
+  text-align: center; /* Align text to the center */
+  margin: 0 auto 20px; /* Center the category boxes and add bottom margin */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Hide submenus by default */
+.subtopics-leftmenu {
+  display: none;
+  list-style-type: none; /* Remove bullet points */
+}
+
+/* On hover, change background color */
+.left-menu-category:hover {
+  background: #25578a; /* Darker shade of blue for hover effect */
+}
+
+/* Style for category titles */
+.left-menu-category h3 {
+  font-size: 14px; /* Adjust the font size as needed */
+  margin-top: 0; /* Remove top margin from category titles */
+}
+
+/* Style for submenu items */
+.subtopics-leftmenu li {
+  width: 100%; /* Ensure submenu items occupy the full width of the left menu */
+  margin-left: 0; /* Remove default left margin */
+}
+
+.subtopics-leftmenu li a {
+  font-size: 13.5px; /* Adjust the font size as needed */
+  color: #ffffff; /* Text color for submenu items */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding to create spacing */
+  display: block; /* Ensure each item occupies the full width */
+  text-align: left; /* Align text to the left */
+  word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+  white-space: normal; /* Allow text to wrap onto the next line */
+}
+
+/* Hover effect for submenu items */
+.subtopics-leftmenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Add a light background color on hover */
+}
+
+/* Show submenu when category is clicked */
+.left-menu-category.clicked .subtopics-leftmenu {
+  display: block;
+}
+
+/* Style for dropdown icons */
+.left-menu-category .icon {
+  float: right; /* Float the icons to the right */
+  margin-left: 5px; /* Add margin between icon and text */
+}
+
+
+
+
+
+#main-content {
+  margin-left: 20%; /* Leave space for the left menu */
+  margin-top: 6.5%; /* Move the main content down to accommodate the header */
+  width: 80%; /* Set the width of the main content to 80% of the viewport */
+  height: 84%; /* Set the height of the main content to fill the remaining space */
+  background-color: #ffffff; /* Background color of the main content */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 1000px) {
+  #left-menu-new {
+    display: none; /* Hide the left menu on mobile screens */
+  }
+
+  /* Adjust main content width to 100% on mobile screens */
+  #main-content {
+    margin-left: 0; /* Remove left margin */
+    width: 100%; /* Set the width to 100% */
+  }
 }
 
 
@@ -178,7 +258,7 @@ p {
 
 #video-section {
   position: relative;
-  height: 500px; /* Adjust the height of the video section */
+  height: 299px; /* Adjust the height of the video section */
 }
 
 #video-container {
@@ -277,12 +357,25 @@ main {
 
 /* Styling for footer */
 footer {
-  background-color: #337cbf; /* fallback color */
+  position: fixed; /* Fix the footer at the bottom of the viewport */
+  left: 0; /* Align the left edge of the footer with the left edge of the viewport */
+  bottom: 0; /* Align the bottom edge of the footer with the bottom edge of the viewport */
+  width: 100%; /* Take up the full width of the viewport */
+  background-color: #337cbf; /* Fallback color */
   background-image: linear-gradient(to right, #1c3c6d, #337cbf);
   color: #ffffff;
   text-align: center;
-  padding: 10px;
+  padding: 1px; /* Increase padding for better spacing */
 }
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 0.5px; /* Reduce padding for smaller screens */
+    font-size: 11px; /* Reduce font size for smaller screens */
+  }
+}
+
 
 /* Styling for chat bubble */
 .chat-bubble {

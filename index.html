@@ -12,7 +12,7 @@
     <header>
       <div class="logo-container">
         <img src="Photos/icon-blue.svg" alt="Company Logo"> <!-- Add your logo file here -->
-        <h1>Elabram IT Support Helpdesk</h1>
+        <h1>Ask IT Elabram</h1>
       </div>
       <nav>
         <ul>
@@ -22,34 +22,75 @@
         </ul>
       </nav>
     </header>
-    <header class="scroll-header">
-      <div class="logo-container">
-        <img src="Photos/icon-blue.svg" alt="Company Logo"> <!-- Add your logo file here -->
-        <h1>Elabram IT Support Helpdesk</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">Knowledge Base</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#chat">Live Chat</a></li>
+    
+
+  <div id="wrapper">
+
+    <!-- THE LEFT MENUuuuuuuuuuuuuuuuuuuuuuuuuu -->
+    <div id="left-menu-new">
+      <div class="left-menu-category" id="account-management">
+        <h3>Account Management</h3>
+        <i class="fas fa-caret-down"></i>
+        <ul class="subtopics-leftmenu">
+          <li><a href="https://elabram.com" class="article-link" data-article="How to enable 2FA">How to enable 2FA</a></li>
+          <li><a href="#" class="article-link" data-article="How to reset your password">How to reset your password</a></li>
+          <li><a href="#" class="article-link" data-article="CPanel email setup (for NPO team only)">CPanel email setup (for NPO team only)</a></li>
+          <li><a href="#" class="article-link" data-article="Email signature setting">Email signature setting</a></li>
         </ul>
-      </nav>
-    </header>
-        <section id="video-section">
-          <div id="video-container">
-            <video autoplay muted loop playsinline id="video-bg">
-              <source src="Photos/front-background.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="content">
-            <!-- Your content for the first section goes here -->
-            <h2>Welcome to IT Support Helpdesk</h2>
-            <p></p>
-          </div>
-        </section>
-      
-    <main>
+      </div>
+    
+      <div class="left-menu-category" id="hardware-issues">
+        <h3>Hardware Issues</h3>
+        <i class="fas fa-caret-down"></i>
+        <ul class="subtopics-leftmenu">
+          <li><a href="#" class="article-link" data-article="Mouse not functioning">Mouse not functioning</a></li>
+          <li><a href="#" class="article-link" data-article="The laptop is not turning on">The laptop is not turning on</a></li>
+          <li><a href="#" class="article-link" data-article="Display Issue">Display Issue</a></li>
+          <li><a href="#" class="article-link" data-article="Keyboard not functioning">Keyboard not functioning</a></li>
+          <li><a href="#" class="article-link" data-article="Reset wifi network">Reset wifi network</a></li>
+          <li><a href="#" class="article-link" data-article="Printer installation">Printer installation</a></li>
+          <li><a href="#" class="article-link" data-article="Can't print">Can't print</a></li>
+        </ul>
+      </div>
+    
+      <div class="left-menu-category" id="software-issues">
+        <h3>Software Issues</h3>
+        <i class="fas fa-caret-down"></i>
+        <ul class="subtopics-leftmenu">
+          <li><a href="#" class="article-link" data-article="Software update">Software update</a></li>
+          <li><a href="#" class="article-link" data-article="Setting email on the phone">Setting email on the phone</a></li>
+          <li><a href="#" class="article-link" data-article="Virus infection">Virus infection</a></li>
+          <li><a href="#" class="article-link" data-article="Purchase Request">Purchase Request</a></li>
+        </ul>
+      </div>
+    
+      <div class="left-menu-category" id="data-security-privacy">
+        <h3>Data Security and Privacy</h3>
+        <i class="fas fa-caret-down"></i>
+        <ul class="subtopics-leftmenu">
+          <li><a href="#" class="article-link" data-article="Phishing email guideline">Phishing email guideline</a></li>
+          <li><a href="#" class="article-link" data-article="How to backup data to Google Drive">How to backup data to Google Drive</a></li>
+          <li><a href="#" class="article-link" data-article="Protecting personal information and data privacy">Protecting personal information and data privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  
+
+    <!-- THE RIGHT ALL CONENT ALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL -->
+    <main id="main-content">
+      <section id="video-section">
+        <div id="video-container">
+          <video autoplay muted loop playsinline id="video-bg">
+            <source src="Photos/front-background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="content">
+          <!-- Your content for the first section goes here -->
+          <h2>Welcome to IT Support Helpdesk</h2>
+          <p></p>
+        </div>
+      </section>
       <section id="popular-articles">
         <h2>Popular Articles</h2>
         <ul id="popular-articles-list">
@@ -192,10 +233,12 @@
         <!-- Live chat interface will be displayed here -->
       </section>
     </main>
+    <script src="script.js"></script>
+  </div>
+  <section>
     <footer>
       <p>&copy; 2024 Elabram IT Support</p>
     </footer>
-    <script src="script.js"></script>
-
+  </section>
   </body>
 </html>

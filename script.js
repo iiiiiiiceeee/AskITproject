@@ -17,6 +17,21 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Add click event listener to each category
+document.querySelectorAll('.left-menu-category').forEach(category => {
+  category.addEventListener('click', () => {
+    // Toggle clicked class to show/hide subtopics
+    category.classList.toggle('clicked');
+
+    // Toggle dropdown icon
+    const icon = category.querySelector('.icon');
+    if (icon) {
+      icon.textContent = category.classList.contains('clicked') ? '▲' : '▼';
+    }
+  });
+});
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
