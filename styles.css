@@ -365,7 +365,7 @@ footer {
   background-image: linear-gradient(to right, #1c3c6d, #337cbf);
   color: #ffffff;
   text-align: center;
-  padding: 1px; /* Increase padding for better spacing */
+  padding: 0.5px; /* Increase padding for better spacing */
 }
 
 /* Media query for smaller screens */
