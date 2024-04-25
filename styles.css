@@ -16,6 +16,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
+
 .logo-container {
   display: flex;
   align-items: center; /* Center align items vertically */
@@ -293,6 +294,13 @@ p {
 .content p {
   font-size: 1.5em;
 }
+
+@media only screen and (max-width: 600px) {
+  #video-section {
+    margin-top: 50px; /* Add more margin on top for mobile screens */
+  }
+}
+
 
 /* Styling for navigation links */
 nav ul li a {

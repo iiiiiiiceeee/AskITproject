@@ -1,3 +1,5 @@
+// SCROLL VIEW SMOOTH FUNCTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
 function scrollToSection(sectionId) {
   var section = document.getElementById(sectionId);
   if (section) {
@@ -17,23 +19,25 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Add click event listener to each category
-document.querySelectorAll('.left-menu-category').forEach(category => {
-  category.addEventListener('click', () => {
-    // Toggle clicked class to show/hide subtopics
-    category.classList.toggle('clicked');
+// DROP DOWN LEFT MENUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+document.addEventListener('DOMContentLoaded', function() {
+  // Add click event listener to each category
+  document.querySelectorAll('.left-menu-category').forEach(category => {
+    category.addEventListener('click', () => {
+      // Toggle clicked class to show/hide subtopics
+      category.classList.toggle('clicked');
 
-    // Toggle dropdown icon
-    const icon = category.querySelector('.icon');
-    if (icon) {
-      icon.textContent = category.classList.contains('clicked') ? '▲' : '▼';
-    }
+      // Toggle dropdown icon
+      const icon = category.querySelector('.icon');
+      if (icon) {
+        icon.textContent = category.classList.contains('clicked') ? '▲' : '▼';
+      }
+    });
   });
 });
 
 
-
-
+// POPUPAR ARTICLE FUNCTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 document.addEventListener("DOMContentLoaded", function() {
   // Define articleClicks as a global variable
   let articleClicks = {};
@@ -86,6 +90,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  // Attach event listeners to the article links in the left menu section
+  const leftMenuLinks = document.querySelectorAll("#left-menu-new .article-link");
+  leftMenuLinks.forEach(link => {
+    link.addEventListener("click", function(event) {
+      // Prevent the default behavior of the link
+      event.preventDefault();
+
+      // Get the article name from the link's dataset
+      const articleName = link.dataset.article;
+      
+      // Handle the click for this article
+      handleArticleClick(articleName);
+
+      // Navigate to the linked website after updating the click count
+      // You can modify this behavior as needed
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 100); // Adjust the delay time as needed
+    });
+  });
+
   // Function to retrieve click count data from the server and display popular articles
   function loadPopularArticles() {
       fetch('/click-count-data')
@@ -105,27 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
           });
   }
 
-  // Attach event listeners to the article links in the knowledge base section
-  const knowledgeBaseLinks = document.querySelectorAll("#knowledge-base a");
-  knowledgeBaseLinks.forEach(link => {
-    link.addEventListener("click", function(event) {
-      // Prevent the default behavior of the link
-      event.preventDefault();
-
-      // Get the article name from the link's dataset
-      const articleName = link.dataset.article;
-      
-      // Handle the click for this article
-      handleArticleClick(articleName);
-
-      // Navigate to the linked website after updating the click count
-      // You can modify this behavior as needed
-      setTimeout(() => {
-        window.location.href = link.href;
-      }, 100); // Adjust the delay time as needed
-    });
-  });
-
   // Call the function to load popular articles when the page is loaded
   loadPopularArticles();
 });
+
