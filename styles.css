@@ -164,6 +164,50 @@ p {
   margin-left: 5px; /* Add margin between icon and text */
 }
 
+/* POPULAR ARTICLE SECTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN */
+/* Styling for popular articles section */
+#popular-articles {
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 20px auto; /* Add margin for spacing */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for popular article items */
+#popular-articles-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ensure full width */
+}
+
+#popular-articles-list li {
+  width: calc(50% - 10px); /* Adjust width for two-column layout with spacing */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+  background: linear-gradient(
+    to right,
+    #1c3c6d,
+    #3060a0
+  ); /* Elabram blue shading */
+  color: #ffffff; /* Text color */
+  padding: 15px;
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+#popular-articles-list li a {
+  color: inherit; /* Inherit text color */
+  text-decoration: none; /* Remove underline */
+}
+
+#popular-articles-list li:hover {
+  background-color: rgb(44, 111, 211); /* Darker shade on hover */
+}
+
+
+
 
 
 
