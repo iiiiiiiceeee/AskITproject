@@ -1,10 +1,11 @@
 {
-  "How to enable 2FA": 9,
+  "How to enable 2FA": 13,
   "How to reset your password": 4,
   "CPanel email setup (for NPO team only)": 1,
   "Email signature setting": 3,
   "Mouse not functioning": 13,
-  "Can't print": 2,
+  "Can't print": 7,
   "Software update": 1,
-  "Virus infection": 1
+  "Virus infection": 1,
+  "Protecting personal information and data privacy": 6
 }

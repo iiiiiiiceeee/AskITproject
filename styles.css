@@ -206,7 +206,18 @@ p {
   background-color: rgb(44, 111, 211); /* Darker shade on hover */
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 2900px) {
+  #popular-articles-list li {
+    width: 97%; /* Display one item per row on extra small screens */
+  }
+}
 
+@media screen and (max-width: 756px) {
+  #popular-articles-list li {
+    width: 92%; /* Display one item per row on extra small screens */
+  }
+}
 
 
 
@@ -451,7 +462,6 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   filter: brightness(110%);
 }
-
 #team {
   max-width: 1200px;
   margin: 0 auto;
@@ -472,17 +482,37 @@ footer {
   color: #ffffff;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center content vertically */
 }
 
 .team-member img {
-  width: 100%;
+  width: 71px;
+  height: 71px;
   border-radius: 50%;
   margin-bottom: 10px;
+  object-fit: cover;
+  filter: grayscale(90%) brightness(110%) contrast(130%) hue-rotate(190deg) saturate(150%);
+}
+
+
+.team-member img::after {
+  content: ''; /* Create overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(25, 118, 210, 0.5); /* Blue shade color with opacity */
+  border-radius: 50%; /* Match image border-radius */
 }
 
 .member-details h3 {
   margin-top: 0;
 }
+
 
 /* Media query for smaller screens */
 @media screen and (max-width: 992px) {
