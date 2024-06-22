@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elabram IT Support</title>
+    <title>Ask IT Elabram</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="script.js"></script>
@@ -19,14 +19,15 @@
       </a>
       <nav>
         <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="index.html#knowledge-base" onclick="scrollToSection('knowledge-base')">Knowledge Base</a></li>
           <li><a href="index.html#team" onclick="scrollToSection('team')">Our Team</a></li>
-          <li><a href="index.html#chat">Live Chat</a></li>
+          <li><a href="Tawkto-submitticket.html">Submit Ticket</a></li>
+          <li><a id="liveChatButton">Live Chat</a></li>
         </ul>
       </nav>
     </header>
     
-
    <div id="wrapper">
 
    <!-- THE LEFT MENUuuuuuuuuuuuuuuuuuuuuuuuuu -->
@@ -152,6 +153,46 @@
     </section>
     </main>
     
+      <!-- Tawk.to Embed Code -->
+      <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+          var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+          s1.async = true;
+          s1.src = 'https://embed.tawk.to/5dbabad7154bf74666b6d8cb/1hqeitn2o';
+          s1.charset = 'UTF-8';
+          s1.setAttribute('crossorigin', '*');
+          s0.parentNode.insertBefore(s1, s0);
+        })();
+      </script>
+    
+      <!-- Example of JavaScript API usage -->
+      <script type="text/javascript">
+        Tawk_API.onLoad = function() {
+          Tawk_API.setAttributes({
+            'name'  : 'John Doe',
+            'email' : 'example@example.com',
+            'hash'  : 'sha256hash'
+          }, function(error){});
+        };
+      </script>
+
+          <!-- JavaScript to handle the button click -->
+    <script type="text/javascript">
+      document.getElementById('liveChatButton').addEventListener('click', function() {
+          Tawk_API.maximize();
+      });
+      
+      Tawk_API.onLoad = function() {
+          Tawk_API.setAttributes({
+              'name'  : 'John Doe',
+              'email' : 'example@example.com',
+              'hash'  : 'sha256hash'
+          }, function(error){});
+      };
+  </script>
+
+
   </div>
   <section>
     <footer>

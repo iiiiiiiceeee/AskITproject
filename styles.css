@@ -512,6 +512,8 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   filter: brightness(110%);
 }
+
+/* ///////////////////////////////////////Our team section//////////////////////////////////////////////// */
 #team {
   max-width: 1200px;
   margin: 0 auto;
@@ -578,3 +580,30 @@ footer {
     width: 100%; /* For extra small screens, display 1 box per row */
   }
 }
+
+/* Default font size */
+#team .team-member .member-details {
+  font-size: 16px;
+}
+
+/* Adjust font size for 125% zoom (120 DPI) */
+@media screen and (min-resolution: 120dpi) and (max-resolution: 143dpi) {
+  #team .team-member .member-details {
+    font-size: 14px;
+  }
+}
+
+/* Adjust font size for 150% zoom (144 DPI) */
+@media screen and (min-resolution: 144dpi) and (max-resolution: 167dpi) {
+  #team .team-member .member-details {
+    font-size: 12px;
+  }
+}
+
+/* Adjust font size for 175% zoom (168 DPI) */
+@media screen and (min-resolution: 168dpi) {
+  #team .team-member .member-details {
+    font-size: 10px;
+  }
+}
+

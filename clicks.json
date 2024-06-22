@@ -1,13 +1,16 @@
 {
-  "How to enable 2FA": 14,
-  "Email signature setting": 11,
-  "How to reset your password": 2,
-  "Purchase Request": 3,
+  "How to enable 2FA": 16,
+  "Email signature setting": 15,
+  "How to reset your password": 3,
+  "Purchase Request": 4,
   "Printer installation": 3,
   "The laptop is not turning on": 1,
   "Protecting personal information and data privacy": 1,
   "Mouse not functioning": 1,
-  "Display Issue": 1,
-  "CPanel email setup (for NPO team only)": 1,
-  "Virus infection": 1
+  "Display Issue": 2,
+  "CPanel email setup (for NPO team only)": 3,
+  "Virus infection": 2,
+  "Software update": 9,
+  "Phishing email guideline": 2,
+  "Reset wifi network": 1
 }
