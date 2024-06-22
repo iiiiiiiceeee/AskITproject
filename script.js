@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 // POPUPAR ARTICLE FUNCTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 document.addEventListener("DOMContentLoaded", function() {
   let articleClicks = {};
@@ -84,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function() {
         linkElement.href = articleLink.href;
         linkElement.textContent = article;
         articleItem.appendChild(linkElement);
-        articleItem.innerHTML += ` (${clicks} clicks)`;
+        // Removed the click count display
+        // articleItem.innerHTML += ` (${clicks} clicks)`;
         popularArticlesList.appendChild(articleItem);
       }
     });

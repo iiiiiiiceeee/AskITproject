@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Ticket</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    form {
+        display: grid;
+        gap: 15px;
+    }
+
+    .form-group {
+        display: grid;
+        gap: 5px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    @media screen and (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+        button[type="submit"] {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Submit a Ticket</h2>
+    <form id="ticketForm" action="/send-ticket" method="POST">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="details">Details:</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit Ticket</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('ticketForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Client-side validation (you can add more checks as needed)
+        let title = document.getElementById('title').value.trim();
+        let name = document.getElementById('name').value.trim();
+        let email = document.getElementById('email').value.trim();
+        let details = document.getElementById('details').value.trim();
+
+        if (!title || !name || !email || !details) {
+            alert('Please fill out all fields.');
+            return;
+        }
+
+        // Submit the form via AJAX
+        let formData = {
+            title: title,
+            name: name,
+            email: email,
+            details: details
+        };
+
+        fetch('/send-ticket', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Ticket created successfully!');
+                // Optionally, clear the form after successful submission
+                document.getElementById('ticketForm').reset();
+            } else {
+                alert('Failed to create ticket. Please try again later.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to create ticket. Please try again later.');
+        });
+    });
+</script>
+
+</body>
+</html>

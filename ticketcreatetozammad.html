@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Ticket</title>
+</head>
+<body>
+  <h2>Create a New Ticket</h2>
+  
+  <form id="ticketForm">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea><br><br>
+    
+    <button type="submit">Create Ticket</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    document.getElementById('ticketForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var title = document.getElementById('title').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      var submitTicketUrl = 'http://localhost:3000/submit-ticket'; // Replace with your server URL
+
+      var ticketData = {
+        name: '', // If you want to pass the user's name, you can handle it in the backend
+        email: email,
+        subject: title,
+        message: message
+      };
+
+      axios.post(submitTicketUrl, ticketData)
+        .then(function(response) {
+          console.log('Ticket created successfully:', response.data);
+          alert('Your ticket has been created successfully!');
+          // Optionally, clear form fields or perform other actions after successful creation
+          document.getElementById('title').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('message').value = '';
+        })
+        .catch(function(error) {
+          console.error('Error creating ticket:', error);
+          alert('Failed to create ticket. Please try again.');
+        });
+    });
+  </script>
+</body>
+</html>

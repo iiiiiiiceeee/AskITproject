@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #tawkChatContainer {
+            width: 100%;
+            height: 100%;
+        }
+        .tawk-popup {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: none !important;
+            max-height: none !important;
+            top: 0 !important;
+            left: 0 !important;
+            transform: none !important;
+            position: fixed !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="tawkChatContainer"></div>
+    
+    <!-- Tawk.to Embed Code -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5dbabad7154bf74666b6d8cb/1hqeitn2o';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <!-- Example of JavaScript API usage -->
+    <script type="text/javascript">
+        Tawk_API.onLoad = function() {
+            Tawk_API.setAttributes({
+                'name'  : 'John Doe',
+                'email' : 'example@example.com',
+                'hash'  : 'sha256hash'
+            }, function(error){});
+            
+            // Open the chat widget in full screen
+            Tawk_API.maximize();
+        };
+    </script>
+</body>
+</html>
