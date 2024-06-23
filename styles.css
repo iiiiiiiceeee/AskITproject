@@ -438,19 +438,22 @@ nav ul li a {
 
 @media screen and (max-width: 768px) {
   nav ul li a {
-    padding: 12px 16px; /* Adjust padding for small screens */
+    padding: 11px 15px; /* Adjust padding for small screens */
     font-size: 0.7em; /* Adjust font size for small screens */
   }
 }
 
 @media screen and (max-width: 576px) {
   nav ul li a {
-    padding: 4px 8px; /* Adjust padding for extra small screens */
-    font-size: 0.7em; /* Adjust font size for extra small screens */
+    padding: 3px 7px; /* Adjust padding for extra small screens */
+    font-size: 0.6em; /* Adjust font size for extra small screens */
     display: block; /* Change the display property to stack items vertically */
     margin-right: 0.2px; /* Reduce margin between navigation items on extra small screens */
-  }
-}
+    }
+  nav ul li {
+  margin-right: 9px; /* Adjust the spacing between items */
+    }
+}  
 
 /* Styling for main content sections */
 main {

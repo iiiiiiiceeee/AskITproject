@@ -6,11 +6,12 @@
   "Printer installation": 3,
   "The laptop is not turning on": 1,
   "Protecting personal information and data privacy": 1,
-  "Mouse not functioning": 1,
+  "Mouse not functioning": 2,
   "Display Issue": 2,
-  "CPanel email setup (for NPO team only)": 3,
+  "CPanel email setup (for NPO team only)": 4,
   "Virus infection": 2,
-  "Software update": 9,
+  "Software update": 10,
   "Phishing email guideline": 2,
-  "Reset wifi network": 1
+  "Reset wifi network": 1,
+  "How to backup data to Google Drive": 1
 }
