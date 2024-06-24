@@ -1,5 +1,5 @@
 {
-  "How to enable 2FA": 16,
+  "How to enable 2FA": 17,
   "Email signature setting": 15,
   "How to reset your password": 3,
   "Purchase Request": 4,
@@ -13,5 +13,6 @@
   "Software update": 10,
   "Phishing email guideline": 2,
   "Reset wifi network": 1,
-  "How to backup data to Google Drive": 1
+  "How to backup data to Google Drive": 1,
+  "Setting email on the phone": 1
 }

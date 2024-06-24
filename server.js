@@ -54,6 +54,7 @@ app.get('/click-count-data', (req, res) => {
 
 
 ///////////////////////// Node mailer ////////////////////////////////////////////
+
 // Middleware setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -68,29 +69,52 @@ app.post('/send-ticket', (req, res) => {
         port: 465,                      // Typically, use port 465 for SMTP over SSL
         secure: true,                   // true for 465, false for other ports
         auth: {
-            user: 'Ask.IT@elabram.com',  // Your cPanel email account
-            pass: 'KQwSs^Esvak_'          // Password for the cPanel email account
+            user: 'ask.it@elabram.com',  // Your cPanel email account
+            pass: 'KQwSs^Esvak_'         // Password for the cPanel email account
         }
     });
 
     // Email options
     let mailOptions = {
-        from: 'Ask.IT@elabram.com',  // Sender email address
-        to: 'support@elabram.com', // Receiver email address (Tawk.to)
+        from: email,                    // Sender email address (User's entered email)
+        to: 'support@elabram.com',  // Receiver email address (Tawk.to)
+        replyTo: email,                 // Set replyTo to the user's email
         subject: title,
         text: `Name: ${name}\nEmail: ${email}\n\nDetails:\n${details}`
     };
 
-    // Send email
+    // Email options for sending confirmation to user
+    let userMailOptions = {
+      from: 'Ask.IT@elabram.com',   // Sender email address
+      to: email,                     // Receiver email address (User's email)
+      subject: 'Ask IT Elabram: Ticket Submission Confirmation',
+      text: `Dear ${name},\n\nThank you for submitting your ticket to Ask IT. We have received your request and will review it shortly.\n\nTitle: ${title}\nDetails: ${details}\n\nPlease note, this email is for confirmation purposes only. Do not reply to this email.\n\nBest regards,\nElabram IT Infrastructure Team`
+  };
+  
+
+    // Send email to Tawk.to
     transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          console.error('Error sending email:', error);
-          return res.status(500).json({ success: false, message: 'Failed to create ticket. Please try again later.' });
-      }
-      console.log('Email sent:', info.response);
-      res.json({ success: true, message: 'Ticket created successfully' });
-  });
+        if (error) {
+            console.error('Error sending email:', error);
+            return res.status(500).json({ success: false, message: 'Failed to create ticket. Please try again later.' });
+        }
+        console.log('Email sent to Tawk.to:', info.response);
+
+        // Send confirmation email to the user
+        transporter.sendMail(userMailOptions, (userMailError, userMailInfo) => {
+            if (userMailError) {
+                console.error('Error sending confirmation email to user:', userMailError);
+                // Don't halt the process if confirmation email fails
+            } else {
+                console.log('Confirmation email sent to user:', userMailInfo.response);
+            }
+
+            // Respond to the client
+            res.json({ success: true, message: 'Ticket created successfully' });
+        });
+    });
 });
+
 
 
 
