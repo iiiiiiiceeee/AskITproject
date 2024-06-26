@@ -68,7 +68,7 @@ app.post('/send-ticket', (req, res) => {
     // Email options for Tawk.to
     let mailOptions = {
         from: email, // Sender email address (User's entered email)
-        to: '___ice___@hotmail.co.th', // Receiver email address (Tawk.to)
+        to: 'support@elabram.com', // Receiver email address (Tawk.to)
         replyTo: email, // Set replyTo to the user's email
         subject: title,
         text: `Name: ${name}\nEmail: ${email}\n\nDetails:\n${details}`
@@ -126,7 +126,7 @@ app.post('/send-ticket-hcaptcha', async (req, res) => {
     // Email options for Tawk.to
     let mailOptions = {
         from: email, // Sender email address (User's entered email)
-        to: '___ice___@hotmail.co.th', // Receiver email address (Tawk.to)
+        to: 'support@elabram.com', // Receiver email address (Tawk.to)
         replyTo: email, // Set replyTo to the user's email
         subject: title,
         text: `Name: ${name}\nEmail: ${email}\n\nDetails:\n${details}`

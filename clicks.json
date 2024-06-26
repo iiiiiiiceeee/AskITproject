@@ -1,18 +1,10 @@
 {
-  "How to enable 2FA": 17,
-  "Email signature setting": 18,
-  "How to reset your password": 3,
-  "Purchase Request": 4,
-  "Printer installation": 3,
-  "The laptop is not turning on": 1,
-  "Protecting personal information and data privacy": 1,
-  "Mouse not functioning": 2,
-  "Display Issue": 2,
-  "CPanel email setup (for NPO team only)": 4,
+  "How to enable 2FA": 5,
+  "Display Issue": 1,
   "Virus infection": 2,
-  "Software update": 10,
-  "Phishing email guideline": 2,
-  "Reset wifi network": 1,
+  "Mouse not functioning": 2,
   "How to backup data to Google Drive": 1,
-  "Setting email on the phone": 1
+  "Email signature setting": 2,
+  "Phishing email guideline": 2,
+  "CPanel email setup (for NPO team only)": 2
 }
